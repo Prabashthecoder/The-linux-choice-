@@ -28,6 +28,18 @@ OPTIONS = '''
 3. Exit
 '''
 
+def menu():
+	while True:
+		try:
+			choice = str(input('\n[?] Do you want to continue? \n> ')).lower()
+			if choice[0] == 'y':
+				return
+			if choice[0] == 'n':
+				sys.exit(0)
+				break
+		except ValueError:
+			sys.exit(0)
+
 
 def main():
     print(logo())
